@@ -1,0 +1,29 @@
+{
+  "templates": {
+    "male_card": "src/data/templates/male_card.png",
+    "female_card": "src/data/templates/female_card.png",
+    "background": "src/data/templates/background.png"
+  },
+
+  "assets": {
+    "icon": "src/assets/images/icon.ico",
+    "splash": "src/assets/images/splash.png",
+    "button_bg": "src/assets/images/button_bg.png",
+    "fonts": {
+      "fifa": "src/assets/fonts/fifa_font.ttf",
+      "arial": "src/assets/fonts/arial_bold.ttf",
+      "digital": "src/assets/fonts/digital.ttf"
+    },
+    "sounds": {
+      "shutter": "src/assets/sounds/camera_shutter.wav",
+      "success": "src/assets/sounds/success.wav",
+      "error": "src/assets/sounds/error.wav"
+    }
+  },
+
+  "output": {
+    "captured": "output/captured/",
+    "cards": "output/cards/",
+    "logs": "output/logs/"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "male_players": [
+    {
+      "id": 1,
+      "name": "Lionel Messi",
+      "position": "RW",
+      "country": "Argentina",
+      "club": "Inter Miami",
+      "base_stats": { "PAC": 85, "SHO": 92, "PAS": 91, "DRI": 95, "DEF": 38, "PHY": 65 },
+      "image": "messi.png"
+    },
+    {
+      "id": 2,
+      "name": "Cristiano Ronaldo",
+      "position": "ST",
+      "country": "Portugal",
+      "club": "Al Nassr",
+      "base_stats": { "PAC": 87, "SHO": 93, "PAS": 82, "DRI": 88, "DEF": 35, "PHY": 78 },
+      "image": "ronaldo.png"
+    },
+    {
+      "id": 3,
+      "name": "Kylian Mbappe",
+      "position": "ST",
+      "country": "France",
+      "club": "PSG",
+      "base_stats": { "PAC": 97, "SHO": 89, "PAS": 80, "DRI": 92, "DEF": 36, "PHY": 78 },
+      "image": "mbappe.png"
+    },
+    {
+      "id": 4,
+      "name": "Erling Haaland",
+      "position": "ST",
+      "country": "Norway",
+      "club": "Manchester City",
+      "base_stats": { "PAC": 89, "SHO": 94, "PAS": 75, "DRI": 80, "DEF": 45, "PHY": 93 },
+      "image": "haaland.png"
+    },
+    {
+      "id": 5,
+      "name": "Kevin De Bruyne",
+      "position": "CM",
+      "country": "Belgium",
+      "club": "Manchester City",
+      "base_stats": { "PAC": 74, "SHO": 86, "PAS": 93, "DRI": 88, "DEF": 64, "PHY": 78 },
+      "image": "debruyne.png"
+    },
+    {
+      "id": 6,
+      "name": "Luka Modric",
+      "position": "CM",
+      "country": "Croatia",
+      "club": "Real Madrid",
+      "base_stats": { "PAC": 80, "SHO": 76, "PAS": 89, "DRI": 90, "DEF": 73, "PHY": 66 },
+      "image": "modric.png"
+    },
+    {
+      "id": 7,
+      "name": "Virgil van Dijk",
+      "position": "CB",
+      "country": "Netherlands",
+      "club": "Liverpool",
+      "base_stats": { "PAC": 78, "SHO": 60, "PAS": 71, "DRI": 72, "DEF": 91, "PHY": 86 },
+      "image": "vandijk.png"
+    },
+    {
+      "id": 8,
+      "name": "Thibaut Courtois",
+      "position": "GK",
+      "country": "Belgium",
+      "club": "Real Madrid",
+      "base_stats": { "DIV": 89, "HAN": 90, "KIC": 75, "REF": 88, "SPD": 52, "POS": 89 },
+      "image": "courtois.png"
+    },
+    {
+      "id": 9,
+      "name": "Achraf Hakimi",
+      "position": "RB",
+      "country": "Morocco",
+      "club": "PSG",
+      "base_stats": { "PAC": 95, "SHO": 75, "PAS": 78, "DRI": 83, "DEF": 76, "PHY": 78 },
+      "image": "hakimi.png"
+    },
+    {
+      "id": 10,
+      "name": "Harry Kane",
+      "position": "ST",
+      "country": "England",
+      "club": "Bayern Munich",
+      "base_stats": { "PAC": 70, "SHO": 92, "PAS": 83, "DRI": 82, "DEF": 47, "PHY": 83 },
+      "image": "kane.png"
+    },
+    {
+      "id": 11,
+      "name": "Robert Lewandowski",
+      "position": "ST",
+      "country": "Poland",
+      "club": "Barcelona",
+      "base_stats": { "PAC": 78, "SHO": 91, "PAS": 79, "DRI": 85, "DEF": 44, "PHY": 86 },
+      "image": "lewandowski.png"
+    },
+    {
+      "id": 12,
+      "name": "Jude Bellingham",
+      "position": "CM",
+      "country": "England",
+      "club": "Real Madrid",
+      "base_stats": { "PAC": 77, "SHO": 82, "PAS": 80, "DRI": 85, "DEF": 72, "PHY": 79 },
+      "image": "bellingham.png"
+    }
+  ],
+
+  "female_players": [
+    {
+      "id": 101,
+      "name": "Alex Morgan",
+      "position": "ST",
+      "country": "USA",
+      "club": "San Diego Wave",
+      "base_stats": { "PAC": 88, "SHO": 86, "PAS": 75, "DRI": 84, "DEF": 42, "PHY": 72 },
+      "image": "morgan.png"
+    },
+    {
+      "id": 102,
+      "name": "Megan Rapinoe",
+      "position": "LW",
+      "country": "USA",
+      "club": "OL Reign",
+      "base_stats": { "PAC": 82, "SHO": 84, "PAS": 86, "DRI": 85, "DEF": 45, "PHY": 68 },
+      "image": "rapinoe.png"
+    },
+    {
+      "id": 103,
+      "name": "Alexia Putellas",
+      "position": "CM",
+      "country": "Spain",
+      "club": "Barcelona",
+      "base_stats": { "PAC": 79, "SHO": 86, "PAS": 91, "DRI": 92, "DEF": 52, "PHY": 74 },
+      "image": "putellas.png"
+    },
+    {
+      "id": 104,
+      "name": "Sam Kerr",
+      "position": "ST",
+      "country": "Australia",
+      "club": "Chelsea",
+      "base_stats": { "PAC": 89, "SHO": 90, "PAS": 73, "DRI": 84, "DEF": 43, "PHY": 83 },
+      "image": "kerr.png"
+    },
+    {
+      "id": 105,
+      "name": "Ada Hegerberg",
+      "position": "ST",
+      "country": "Norway",
+      "club": "Lyon",
+      "base_stats": { "PAC": 80, "SHO": 92, "PAS": 70, "DRI": 78, "DEF": 35, "PHY": 82 },
+      "image": "hegerberg.png"
+    },
+    {
+      "id": 106,
+      "name": "Aitana Bonmati",
+      "position": "CM",
+      "country": "Spain",
+      "club": "Barcelona",
+      "base_stats": { "PAC": 82, "SHO": 78, "PAS": 90, "DRI": 91, "DEF": 60, "PHY": 68 },
+      "image": "bonmati.png"
+    },
+    {
+      "id": 107,
+      "name": "Vivianne Miedema",
+      "position": "CF",
+      "country": "Netherlands",
+      "club": "Arsenal",
+      "base_stats": { "PAC": 81, "SHO": 92, "PAS": 79, "DRI": 86, "DEF": 40, "PHY": 78 },
+      "image": "miedema.png"
+    },
+    {
+      "id": 108,
+      "name": "Wendie Renard",
+      "position": "CB",
+      "country": "France",
+      "club": "Lyon",
+      "base_stats": { "PAC": 67, "SHO": 55, "PAS": 70, "DRI": 62, "DEF": 92, "PHY": 87 },
+      "image": "renard.png"
+    },
+    {
+      "id": 109,
+      "name": "Millie Bright",
+      "position": "CB",
+      "country": "England",
+      "club": "Chelsea",
+      "base_stats": { "PAC": 65, "SHO": 48, "PAS": 68, "DRI": 60, "DEF": 91, "PHY": 88 },
+      "image": "bright.png"
+    },
+    {
+      "id": 110,
+      "name": "Caroline Graham Hansen",
+      "position": "RW",
+      "country": "Norway",
+      "club": "Barcelona",
+      "base_stats": { "PAC": 90, "SHO": 82, "PAS": 85, "DRI": 93, "DEF": 42, "PHY": 70 },
+      "image": "hansen.png"
+    },
+    {
+      "id": 111,
+      "name": "Mary Earps",
+      "position": "GK",
+      "country": "England",
+      "club": "Manchester United",
+      "base_stats": { "DIV": 88, "HAN": 89, "KIC": 73, "REF": 90, "SPD": 58, "POS": 89 },
+      "image": "earps.png"
+    }
+  ]
+}

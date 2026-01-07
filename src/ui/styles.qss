@@ -1,0 +1,149 @@
+/* FIFA Photo Booth - Stylesheet */
+
+QMainWindow {
+    background-color: #1a1a2e;
+}
+
+QLabel {
+    color: #ffffff;
+    font-family: "Arial";
+}
+
+/* Title Label */
+QLabel#title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00aeef;
+    qproperty-alignment: AlignCenter;
+    padding: 20px;
+}
+
+/* Subtitle Label */
+QLabel#subtitle {
+    font-size: 24px;
+    color: #cccccc;
+    qproperty-alignment: AlignCenter;
+    padding: 10px;
+}
+
+/* Primary Button */
+QPushButton {
+    background-color: #00aeef;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 20px 40px;
+    border: 3px solid #0078a8;
+    min-height: 80px;
+}
+
+QPushButton:hover {
+    background-color: #00c6ff;
+    border: 3px solid #00aeef;
+}
+
+QPushButton:pressed {
+    background-color: #0078a8;
+    border: 3px solid #005a82;
+}
+
+QPushButton:disabled {
+    background-color: #666666;
+    border: 3px solid #555555;
+    color: #aaaaaa;
+}
+
+/* Secondary Button */
+QPushButton.secondary {
+    background-color: #26a269;
+    border: 3px solid #1a7a4f;
+}
+
+QPushButton.secondary:hover {
+    background-color: #2ec27e;
+    border: 3px solid #26a269;
+}
+
+/* Camera Preview Frame */
+QFrame#camera_preview {
+    background-color: #000000;
+    border: 3px solid #00aeef;
+    border-radius: 10px;
+}
+
+/* Processing Screen */
+QWidget#processing_screen {
+    background-color: rgba(0, 0, 0, 200);
+}
+
+QLabel#processing_text {
+    font-size: 32px;
+    color: #00aeef;
+    qproperty-alignment: AlignCenter;
+}
+
+/* Result Card Display */
+QLabel#card_display {
+    border: 5px solid #00aeef;
+    border-radius: 15px;
+    background-color: #000000;
+}
+
+/* Print Button */
+QPushButton#print_button {
+    background-color: #ff6b00;
+    border: 3px solid #cc5500;
+}
+
+QPushButton#print_button:hover {
+    background-color: #ff8533;
+    border: 3px solid #ff6b00;
+}
+
+/* Save Button */
+QPushButton#save_button {
+    background-color: #26a269;
+    border: 3px solid #1a7a4f;
+}
+
+/* Progress Bar */
+QProgressBar {
+    border: 2px solid #00aeef;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+QProgressBar::chunk {
+    background-color: #00aeef;
+    border-radius: 3px;
+}
+
+/* ComboBox */
+QComboBox {
+    background-color: #333333;
+    color: white;
+    border: 2px solid #00aeef;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 30px;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #333333;
+    color: white;
+    selection-background-color: #00aeef;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #000000;
+    color: #00aeef;
+    font-size: 14px;
+}

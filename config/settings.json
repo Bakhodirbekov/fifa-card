@@ -1,0 +1,58 @@
+{
+  "application": {
+    "name": "FIFA Ultimate Card Photo Booth",
+    "version": "1.0.0",
+    "company": "FIFA Events",
+    "fullscreen": true,
+    "kiosk_mode": true
+  },
+
+  "camera": {
+    "default_camera_index": 0,
+    "resolution_width": 1920,
+    "resolution_height": 1080,
+    "fps": 30,
+    "mirror_preview": true,
+    "capture_delay_ms": 3000
+  },
+
+  "ai": {
+    "gender_detection_threshold": 0.7,
+    "face_detection_backend": "opencv",
+    "models": ["VGG-Face", "OpenFace", "Facenet"],
+    "enable_fallback": true
+  },
+
+  "card": {
+    "template_male": "src/data/templates/male_card.png",
+    "template_female": "src/data/templates/female_card.png",
+    "face_position_x": 150,
+    "face_position_y": 200,
+    "face_size": 400,
+    "font_title": "src/assets/fonts/fifa_font.ttf",
+    "font_stats": "src/assets/fonts/arial_bold.ttf"
+  },
+
+  "printing": {
+    "default_printer": "auto",
+    "paper_size": "A5",
+    "orientation": "portrait",
+    "copies": 1,
+    "enable_print_preview": false
+  },
+
+  "ui": {
+    "language": "uz",
+    "theme": "dark",
+    "button_timeout_seconds": 30,
+    "auto_reset_seconds": 30,
+    "enable_sound_effects": true
+  },
+
+  "paths": {
+    "captured_photos": "output/captured/",
+    "generated_cards": "output/cards/",
+    "logs": "output/logs/",
+    "usb_backup": "D:/FIFA_Cards/"
+  }
+}
