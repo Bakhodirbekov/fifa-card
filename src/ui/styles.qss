@@ -1,149 +1,120 @@
-/* FIFA Photo Booth - Stylesheet */
+/* FIFA x Coca-Cola Photo Booth - Stylesheet */
 
 QMainWindow {
-    background-color: #1a1a2e;
+    background-color: #000000;
+    /* Full background image, no repeat, cover */
+    background-image: url('src/assets/bg_pattern.png');
+    background-repeat: no-repeat;
+    background-position: center;
+     /* cover property is not directly supported in QSS for background-image in same way as CSS, 
+       but we can use border-image or stick to centered. 
+       Better approach for QMainWindow is usually setting a central widget style or using border-image. 
+       Let's try border-image for full coverage */
+    border-image: url('src/assets/bg_pattern.png') 0 0 0 0 stretch stretch;
 }
 
 QLabel {
-    color: #ffffff;
-    font-family: "Arial";
+    color: #ffffff; /* Asosiy matn OQ */
+    font-family: "Segoe UI", "Arial", sans-serif;
 }
 
 /* Title Label */
 QLabel#title {
-    font-size: 48px;
-    font-weight: bold;
-    color: #00aeef;
+    font-size: 56px;
+    font-weight: 900;
+    /* Title can be Coca-Cola Red or White with Red glow */
+    color: #ffffff; 
     qproperty-alignment: AlignCenter;
-    padding: 20px;
+    padding: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* Optional: add text shadow if supported or just keep clean */
 }
 
 /* Subtitle Label */
 QLabel#subtitle {
-    font-size: 24px;
-    color: #cccccc;
+    font-size: 28px;
+    color: #d4af37; /* Gold for subtitle */
     qproperty-alignment: AlignCenter;
     padding: 10px;
+    font-style: italic;
 }
 
-/* Primary Button */
+/* Primary Button (Coca-Cola Style) */
 QPushButton {
-    background-color: #00aeef;
-    color: white;
-    font-size: 24px;
+    background-color: #F40009; /* Coca-Cola Red */
+    color: white; /* Text on button is White */
+    font-size: 28px;
     font-weight: bold;
-    border-radius: 15px;
-    padding: 20px 40px;
-    border: 3px solid #0078a8;
-    min-height: 80px;
+    border-radius: 40px; 
+    padding: 25px 50px;
+    border: 3px solid #ffffff; 
+    min-height: 90px;
+    text-transform: uppercase;
 }
 
 QPushButton:hover {
-    background-color: #00c6ff;
-    border: 3px solid #00aeef;
+    background-color: #ffffff;
+    color: #F40009;
+    border: 3px solid #F40009;
 }
 
 QPushButton:pressed {
-    background-color: #0078a8;
-    border: 3px solid #005a82;
+    background-color: #b30000;
+    color: #cccccc;
+    border: 3px solid #b30000;
 }
 
-QPushButton:disabled {
-    background-color: #666666;
-    border: 3px solid #555555;
-    color: #aaaaaa;
-}
-
-/* Secondary Button */
+/* Secondary Button (FIFA Gold Style) */
 QPushButton.secondary {
-    background-color: #26a269;
-    border: 3px solid #1a7a4f;
+    background-color: #1a1a1a;
+    border: 3px solid #d4af37; 
+    color: #d4af37;
 }
 
-QPushButton.secondary:hover {
-    background-color: #2ec27e;
-    border: 3px solid #26a269;
+/* Gender Buttons */
+QPushButton#gender_male {
+    background-color: #004d99; 
+    border: 4px solid white;
+    color: white;
+}
+QPushButton#gender_female {
+    background-color: #e60073; 
+    border: 4px solid white;
+    color: white;
 }
 
 /* Camera Preview Frame */
 QFrame#camera_preview {
-    background-color: #000000;
-    border: 3px solid #00aeef;
-    border-radius: 10px;
+    background-color: transparent;
+    border: 6px solid #d4af37; /* Gold border for camera */
+    border-radius: 20px;
 }
 
-/* Processing Screen */
-QWidget#processing_screen {
-    background-color: rgba(0, 0, 0, 200);
-}
-
+/* Processing Text */
 QLabel#processing_text {
-    font-size: 32px;
-    color: #00aeef;
+    font-size: 42px;
+    font-weight: bold;
+    color: #d4af37; /* Gold text */
     qproperty-alignment: AlignCenter;
 }
 
 /* Result Card Display */
-QLabel#card_display {
-    border: 5px solid #00aeef;
+/* WebEngineView or Label container */
+QWidget#card_display {
+    border: 4px solid #d4af37;
     border-radius: 15px;
-    background-color: #000000;
+    background-color: rgba(0,0,0,0.5);
 }
 
-/* Print Button */
+/* Print/Save Buttons specific styles if needed */
 QPushButton#print_button {
-    background-color: #ff6b00;
-    border: 3px solid #cc5500;
+    background-color: #F40009;
+    color: white;
 }
 
-QPushButton#print_button:hover {
-    background-color: #ff8533;
-    border: 3px solid #ff6b00;
-}
-
-/* Save Button */
 QPushButton#save_button {
-    background-color: #26a269;
-    border: 3px solid #1a7a4f;
-}
-
-/* Progress Bar */
-QProgressBar {
-    border: 2px solid #00aeef;
-    border-radius: 5px;
-    text-align: center;
+    background-color: #26a269; /* Green for finish */
     color: white;
-    font-size: 14px;
-}
-
-QProgressBar::chunk {
-    background-color: #00aeef;
-    border-radius: 3px;
-}
-
-/* ComboBox */
-QComboBox {
-    background-color: #333333;
-    color: white;
-    border: 2px solid #00aeef;
-    border-radius: 5px;
-    padding: 5px;
-    min-height: 30px;
-}
-
-QComboBox::drop-down {
-    border: none;
-}
-
-QComboBox QAbstractItemView {
-    background-color: #333333;
-    color: white;
-    selection-background-color: #00aeef;
-}
-
-/* Status Bar */
-QStatusBar {
-    background-color: #000000;
-    color: #00aeef;
-    font-size: 14px;
+    border: 3px solid white;
 }

@@ -25,45 +25,65 @@ class CameraManager:
             self.camera.release()
             self.camera = None
 
-        # Prefer MSMF on modern Windows, then DSHOW
-        backends = [cv2.CAP_MSMF, cv2.CAP_DSHOW, None]
+        print("🎥 Starting camera initialization...")
         
-        for i in range(2):  # Try indices 0 and 1
-            for backend in backends:
-                print(f"🔄 Trying Camera {i} with backend {backend}...")
+        # Try different backends in order of preference for Windows
+        backends = [
+            (cv2.CAP_DSHOW, "DirectShow"),
+            (cv2.CAP_MSMF, "Media Foundation"),
+            (None, "Default")
+        ]
+        
+        # Try multiple camera indices
+        for i in range(3):  # Try indices 0, 1, 2
+            for backend, backend_name in backends:
+                print(f"🔄 Trying Camera {i} with {backend_name}...")
                 try:
+                    # Attempt to create VideoCapture with backend
                     if backend is not None:
                         cam = cv2.VideoCapture(i, backend)
                     else:
                         cam = cv2.VideoCapture(i)
                     
                     if cam.isOpened():
-                        # Set resolution early
+                        # Set resolution
                         cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
                         cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
+                        cam.set(cv2.CAP_PROP_BUFFERSIZE, 1)
                         
-                        # Aggressive warm up - some cameras need many frames to stabilize exposure
+                        # Wait for camera to stabilize
+                        time.sleep(0.5)
+                        
+                        # Try to read frames
                         success = False
-                        for _ in range(15): 
+                        for attempt in range(10):
                             ret, frame = cam.read()
-                            if ret and frame is not None:
-                                # Check if frame is not pitch black
-                                if np.mean(frame) > 10: 
+                            if ret and frame is not None and frame.size > 0:
+                                avg_brightness = np.mean(frame)
+                                if avg_brightness > 5:
                                     success = True
-                                    break
+                                    self.camera = cam
+                                    print(f"✅ Camera {i} initialized successfully with {backend_name}!")
+                                    return True
                             time.sleep(0.1)
                         
-                        if success:
-                            self.camera = cam
-                            print(f"✅ Camera {i} initialized successfully!")
-                            return True
-                        else:
-                            print(f"⚠️ Camera {i} backend {backend} returned only black frames. Closing...")
+                        if not success:
+                            print(f"⚠️ Camera {i} ({backend_name}) returned invalid frames")
                             cam.release()
+                    
                 except Exception as e:
-                    print(f"❌ Error with Camera {i} backend {backend}: {e}")
-                
-        print("❌ Could not find any working camera.")
+                    print(f"❌ Error with camera {i} ({backend_name}): {str(e)[:100]}")
+        
+        print("=" * 60)
+        print("❌ NO CAMERA FOUND!")
+        print("=" * 60)
+        print("💡 Troubleshooting steps:")
+        print("  1. Check Windows Camera permissions:")
+        print("     Settings > Privacy & Security > Camera")
+        print("  2. Close apps using camera (Teams, Zoom, Skype)")
+        print("  3. Try plugging in a USB webcam")
+        print("  4. Restart the application")
+        print("=" * 60)
         return False
 
     def start_preview(self):
